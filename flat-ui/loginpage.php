@@ -50,7 +50,7 @@ function check() {
                 //$("#imgicon").fadeOut();
                 //$("#imgsuicon").fadeIn();
                 let timetick = setTimeout(function() {
-                    location.href = "http://<?php echo $_SERVER['HTTP_HOST'] ?>";
+                    location.href = "<?php echo $OJ_HOME?>";
                 }, 700);
                 // location.href="http://<?php// echo $_SERVER['HTTP_HOST'] ?>";
             } else {
@@ -61,7 +61,7 @@ function check() {
             }
         }
     };
-    asypost.open("POST", "login.php", true);
+    asypost.open("POST", "template/<?php echo $OJ_TEMPLATE ?>/login.php", true);
     asypost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     asypost.send("msg=" + jsonstring);
 }
