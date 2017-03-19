@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="js/jquery.min.js"></script>
-<!--<script src="js/flat-ui.min.js"></script>-->
+      <?php include("template/$OJ_TEMPLATE/js.php");?>
+      <!--<script src="js/flat-ui.min.js"></script>-->
     <link rel="icon" href="../../favicon.ico">
 
     <title><?php echo $OJ_NAME?></title>  
@@ -42,7 +42,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <?php include("template/$OJ_TEMPLATE/js.php");?>	    
  <script language="javascript" type="text/javascript" src="include/jquery.flot.js"></script>
 <script type="text/javascript">
 $(function () {

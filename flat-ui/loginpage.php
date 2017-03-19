@@ -7,10 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-<script src="js/jquery.min.js"></script>
-<script src="js/flat-ui.min.js"></script>
-<script src="js/json2.js"></script>
-<script src="js/jquery.color.js"></script>
+<script src="template/<?php echo $OJ_TEMPLATE ?>/js/jquery.min.js"></script>
+<script src="template/<?php echo $OJ_TEMPLATE ?>/js/flat-ui.min.js"></script>
+<script src="template/<?php echo $OJ_TEMPLATE ?>/js/json2.js"></script>
+<script src="template/<?php echo $OJ_TEMPLATE ?>/js/jquery.color.js"></script>
 <script>
 function check() {
     let a = document.getElementById("user_id").value;
@@ -39,7 +39,7 @@ function check() {
                 document.getElementById('password_control').className = "form-group has-success";
                 document.getElementById('login-button').className = "btn btn-success btn-lg btn-block";
                 document.getElementById('login-button').innerHTML = "登陆成功";
-                document.getElementById('imgicon').src = "img/login/Clipboard.png";
+                document.getElementById('imgicon').src = "template/<?php echo $OJ_TEMPLATE?>/img/login/Clipboard.png";
                 document.getElementById('imgicon').style.display = "none";
                 $("#imgicon").fadeIn();
                 jQuery("#login-screen-control").animate({
@@ -145,7 +145,7 @@ function find() {
     $("#lost").fadeOut(300);
     $("#password_control").fadeOut(300);
     $("#imgicon").fadeOut(300, function() {
-        document.getElementById('imgicon').src = "img/login/Map.png";
+        document.getElementById('imgicon').src = "template/<?php echo $OJ_TEMPLATE?>/img/login/Map.png";
         $("#imgicon").fadeIn(300);
     });
     $("#login-button").fadeOut(300, function() {
@@ -179,9 +179,9 @@ function find() {
  <div class="login" style="position: relative;">
         <div class="login-screen" id="login-screen-control">
           <div class="login-icon">
-            <img src="img/login/icon.png" alt="Welcome to CUPOJ" id="imgicon" />
-            <img src="img/login/Clipboard.png" alt="Look for your account" id="lookicon" style="display:none"/>
-          <!--  <img src="img/login/Retina-Ready.png" alt="success" id="imgsuicon" style="visibility:hidden" />-->
+            <img src="template/<?php echo $OJ_TEMPLATE?>/img/login/icon.png" alt="Welcome to CUPOJ" id="imgicon" />
+            <img src="template/<?php echo $OJ_TEMPLATE?>/img/login/Clipboard.png" alt="Look for your account" id="lookicon" style="display:none"/>
+          <!--  <img src="template/<?php echo $OJ_TEMPLATE?>/img/login/Retina-Ready.png" alt="success" id="imgsuicon" style="visibility:hidden" />-->
             <h4>Welcome to <p>CUP Online Judge</p></h4>
           </div>
 
@@ -203,7 +203,7 @@ function find() {
 
             <a class="btn btn-info btn-lg btn-block" href="javascript:void(0)" onclick="check()" id="login-button">登录</a><div id="lostcontrol" style="display:none">
             <a class="btn btn-info btn-lg" onclick="posttext()"  style="margin:auto;text-align:center">提交</a>&nbsp;<a class="btn btn-info btn-lg" name="reset" onclick="location.reload();"  style="margin:auto;text-align:center">重置</a></div>
-            <a class="login-link" href="javascript:void(0)" onclick="find()" id="lost">找回密码</a>
+            <a class="login-link" href="lostpassword.php"  id="lost">找回密码</a>
           </div>
         </div>
       </div>
