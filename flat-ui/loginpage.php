@@ -11,6 +11,7 @@
 <script src="template/<?php echo $OJ_TEMPLATE ?>/js/flat-ui.min.js"></script>
 <script src="template/<?php echo $OJ_TEMPLATE ?>/js/json2.js"></script>
 <script src="template/<?php echo $OJ_TEMPLATE ?>/js/jquery.color.js"></script>
+      <script src="template/<?php echo $OJ_TEMPLATE ?>/js/base64.js"></script>
 <script>
 function check() {
     let a = document.getElementById("user_id").value;
@@ -53,6 +54,7 @@ function check() {
                     location.href = "<?php echo $OJ_HOME?>";
                 }, 700);
                 // location.href="http://<?php// echo $_SERVER['HTTP_HOST'] ?>";
+
             } else {
                 document.getElementById('user_id_control').className = "form-group has-error";
                 document.getElementById('password_control').className = "form-group has-error";
@@ -63,7 +65,7 @@ function check() {
     };
     asypost.open("POST", "template/<?php echo $OJ_TEMPLATE ?>/login.php", true);
     asypost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    asypost.send("msg=" + jsonstring);
+    asypost.send("msg=" + Base64.encode(jsonstring));
 }
 
 function enterpress(e) {

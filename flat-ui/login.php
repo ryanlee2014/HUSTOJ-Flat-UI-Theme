@@ -2,6 +2,7 @@
     require_once("../../include/db_info.inc.php");
     $vcode="";
     $json_msg=$_POST['msg'];
+	$json_msg=base64_decode($json_msg);
     $decode_json=json_decode($json_msg,true);
     if(isset($_POST['vcode']))	$vcode=trim($_POST['vcode']);
     if($OJ_VCODE&&($vcode!= $_SESSION["vcode"]||$vcode==""||$vcode==null) ){
