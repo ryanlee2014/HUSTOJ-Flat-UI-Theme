@@ -23,7 +23,11 @@ function check() {
     arr.user_id=a;
     arr.password=b;
     //arr["password"] = b;
+    <?php if($OJ_VCODE){?>
+    let jsonstring="{\"user_id\":\"" + a + "\",\"password\":\"" + b + "\",\"vcode\":\""+ c + "\"}";
+    <?php } else{?>
     let jsonstring = "{\"user_id\":\"" + a + "\",\"password\":\"" + b + "\"}";
+    <?php }?>
     // alert(jsonstring);
     //console.log(jsonstring);
     if (window.XMLHttpRequest) {
@@ -55,7 +59,12 @@ function check() {
                 }, 700);
                 // location.href="http://<?php// echo $_SERVER['HTTP_HOST'] ?>";
 
-            } else {
+            }
+            else if(response=="vcode false")
+            {
+                document.getElementById('vcode_control').className = "form-group has-error";
+
+            }else {
                 document.getElementById('user_id_control').className = "form-group has-error";
                 document.getElementById('password_control').className = "form-group has-error";
                 document.getElementById('login-button').className = "btn btn-danger btn-lg btn-block";
