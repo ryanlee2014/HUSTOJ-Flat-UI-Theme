@@ -7,21 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-<script>
-    function checkfun()
-    {
-        let v=document.getElementById('user_id').value;
-        if(v.charAt(0)=='2'&&v.length==10&&!(isNaN(v)))
-        {
-            document.getElementById('submit').disabled=false;
-        }
-        else
-        {
-            document.getElementById('submit').disabled=true;
-        }
-        
-    }
-</script>
     <title><?php echo $OJ_NAME?></title>  
     <?php include("template/$OJ_TEMPLATE/css.php");?>	    
 
@@ -44,7 +29,7 @@
 <center><table>
 <tr><td colspan=2 height=40 width=500>&nbsp;&nbsp;&nbsp;<?php echo $MSG_REG_INFO?></td></tr>
 <tr><td width=25%><?php echo $MSG_USER_ID?>:</td>
-<td width=75%><input name="user_id" id="user_id" size=20 type=text placeholder="*" onkeyup="checkfun()"></td>
+<td width=75%><input name="user_id" id="user_id" size=20 type=text placeholder="*""></td>
 </tr>
 <tr><td><?php echo $MSG_NICK?>:</td>
 <td><input name="nick" size=50 type=text></td>
@@ -67,7 +52,7 @@
 </tr>
 <?php }?>
 <tr><td></td>
-<td><input value="Submit" name="submit" type="submit" id="submit" disabled="disabled"><input value="Reset" name="reset" type="reset"></td>
+<td><input value="Submit" name="submit" type="submit" id="submit"><input value="Reset" name="reset" type="reset"></td>
 </tr>
 </table></center>
 <br><br>
