@@ -33,6 +33,10 @@
 <!-- ;visibility:hidden; -->
 </center>
         </p>
+          <?php
+          $view_news.= "<table width=\"96%\"><tbody><tr><td width=20%><td>Theme:<a href='https://github.com/ryanlee2014/HUSTOJ-Flat-UI-Theme'>HUSTOJ-Flat-UI-Theme</a> </tr></tbody></table>";
+          $view_news.= "</table>";
+          ?>
 	<?php echo $view_news?>
       </div>
 
