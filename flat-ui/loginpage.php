@@ -16,6 +16,7 @@
 function check() {
     let a = document.getElementById("user_id").value;
     let b = document.getElementById("password").value;
+    let c = document.getElementById("vcode").value;
     let asypost;
     let arr = [];
     let response;
@@ -214,7 +215,7 @@ function find() {
               <?php if($OJ_VCODE){?>
 
                   <div class="form-group">
-                      <div class="col-sm-4" style="margin-left:-6px;width:65%"><input name="vcode" class="form-control" type="text" placeholder="验证码" style="width:80%"></div><div class="col-sm-4"><img alt="click to change" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()" height="40px">*</div>						</div>
+                      <div class="col-sm-4" style="margin-left:-6px;width:65%"><input id="vcode" name="vcode" class="form-control" type="text" placeholder="验证码" style="width:80%"></div><div class="col-sm-4"><img alt="click to change" src="vcode.php" onclick="this.src='vcode.php?'+Math.random()" height="40px">*</div>						</div>
               <?php }?>
             <a class="btn btn-info btn-lg btn-block" href="javascript:void(0)" onclick="check()" id="login-button">登录</a><div id="lostcontrol" style="display:none">
             <a class="btn btn-info btn-lg" onclick="posttext()"  style="margin:auto;text-align:center">提交</a>&nbsp;<a class="btn btn-info btn-lg" name="reset" onclick="location.reload();"  style="margin:auto;text-align:center">重置</a></div>

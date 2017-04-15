@@ -87,7 +87,25 @@ echo"<option value=$i ".( $lastlang==$i?"selected":"").">
 </select>
 <br>
 </span>
+    <pre class="code" ace-mode="ace/mode/<?php echo $language_name[$lastlang] ?>" ace-theme="ace/theme/Monokai">
+<?php
+$prepend_file="$OJ_DATA/$id/prepend.$language_ext[$lastlang]";
+if(isset($OJ_APPENDCODE)&&$OJ_APPENDCODE&&file_exists($prepend_file))
+{
+    echo file_get_contents($prepend_file);
+}
+    ?>
+</pre>
 <textarea style="width:80%" cols=180 rows=20 id="source" name="source"><?php echo htmlentities($view_src,ENT_QUOTES,"UTF-8")?></textarea><br>
+    <pre class="code" ace-mode="ace/mode/<?php echo $language_name[$lastlang] ?>" ace-theme="ace/theme/Monokai">
+<?php
+$append_file="$OJ_DATA/$id/append.$language_ext[$lastlang]";
+if(isset($OJ_APPENDCODE)&&$OJ_APPENDCODE&&file_exists($append_file))
+{
+    echo file_get_contents($append_file);
+}
+?>
+</pre>
 <?php echo $MSG_Input?>:<textarea style="width:30%" cols=40 rows=5 id="input_text" name="input_text" ><?php echo $view_sample_input?></textarea>
 <?php echo $MSG_Output?>:
 <textarea style="width:30%" cols=10 rows=5 id="out" name="out" >SHOULD BE:
