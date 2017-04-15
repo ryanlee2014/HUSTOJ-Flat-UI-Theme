@@ -191,7 +191,7 @@ function find() {
  <div class="login" style="position: relative;">
         <div class="login-screen" id="login-screen-control">
           <div class="login-icon">
-            <img src="template/<?php echo $OJ_TEMPLATE?>/img/login/icon.png" alt="Welcome to CUPOJ" id="imgicon" />
+            <img src="template/<?php echo $OJ_TEMPLATE?>/img/login/icon.png" alt="Welcome to <?php echo $OJ_NAME ?>" id="imgicon" />
             <img src="template/<?php echo $OJ_TEMPLATE?>/img/login/Clipboard.png" alt="Look for your account" id="lookicon" style="display:none"/>
           <!--  <img src="template/<?php echo $OJ_TEMPLATE?>/img/login/Retina-Ready.png" alt="success" id="imgsuicon" style="visibility:hidden" />-->
             <h4>Welcome to <p>CUP Online Judge</p></h4>
